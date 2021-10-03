@@ -48,13 +48,13 @@ nnoremap Y yg$
 " unsets the last search pattern registered by hitting return
 nnoremap <CR> :noh<CR><CR>
 
-nnoremap <leader>fd <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fc <cmd>lua require('telescope.builtin').curr_buff()<cr>
-nnoremap <leader>ft <cmd>lua require('telescope.builtin').git_files()<cr>
-nnoremap <leader>fe <cmd>lua require('telescope.builtin').file_browser()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>fd <cmd>lua require('telescope.setup').find_files()<cr>
+nnoremap <leader>fc <cmd>lua require('telescope.setup').curr_buff()<cr>
+nnoremap <leader>ft <cmd>lua require('telescope.setup').git_files()<cr>
+nnoremap <leader>fe <cmd>lua require('telescope.setup').file_browser()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.setup').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.setup').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.setup').help_tags()<cr>
 nnoremap <leader>en <cmd>lua require('telescope.setup').find_nvim()<cr>
 
 " use <tab> to trigger completion
