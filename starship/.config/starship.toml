@@ -1,19 +1,24 @@
+# note: color values are based on nord theme
+
 add_newline = false
 
+# haven't figured out how to split line while also displaying literal chars '[' and ']' so bit messy
 format = '''
-[\[](bold cyan)$username$hostname $directory[\]](bold cyan)$git_branch$git_status$character'''
+[\[](#8fbcbb)$username$hostname $directory[\]](#8fbcbb)$git_branch$git_commit$git_state$git_status$character'''
 
 [character]
-success_symbol = '[\$](bold cyan)'
-error_symbol = '[\$](bold cyan)'
+success_symbol = '[\$](#8fbcbb)'
+error_symbol = '[\$](#8fbcbb)'
 
 [username]
+style_user = "#8fbcbb"
 show_always = true
-format = '[$user@](bold cyan)'
+format = '[$user@]($style)'
 
 [hostname]
+style = "#8fbcbb"
 ssh_only = false
-format = '[$hostname](bold cyan)'
+format = '[$hostname]($style)'
 
 [directory]
 truncation_length = 1 
@@ -22,7 +27,7 @@ format = '[$path]()'
 
 [git_branch]
 symbol = ""
-format = "[ $symbol$branch]($style)"
+format = "[$symbol$branch]($style)"
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
