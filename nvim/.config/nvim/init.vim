@@ -15,8 +15,8 @@ if (empty($TMUX))
   endif
 endif
 let g:gruvbox_italic=1
-set bg=dark
-colorscheme gruvbox
+" set bg=dark
+colorscheme nord
 let g:airline#extensions#tabline#enabled = 1
 
 " general editor setting

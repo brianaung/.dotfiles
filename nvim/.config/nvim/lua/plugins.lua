@@ -15,6 +15,7 @@ return require('packer').startup(function()
   use 'yggdroot/indentline'
   use 'vim-airline/vim-airline'
   use 'morhetz/gruvbox'
+  use 'arcticicestudio/nord-vim'
   use {'neoclide/coc.nvim', branch = 'release'}
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
