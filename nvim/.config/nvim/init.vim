@@ -1,7 +1,7 @@
 lua require ('init')
 
+" i will move all of it to lua someday... i stg someday
 " display settings
-syntax on
 filetype plugin indent on
 set number
 set visualbell
@@ -14,9 +14,8 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-let g:gruvbox_italic=1
-" set bg=dark
-colorscheme nord
+colorscheme github_light
+let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#enabled = 1
 
 " general editor setting
@@ -46,7 +45,7 @@ nnoremap <c-l> <c-w><c-l>
 nnoremap Y yg$
 
 " unsets the last search pattern registered by hitting return
-nnoremap <CR> :noh<CR><CR>
+nnoremap <CR> :nohl<CR><CR>
 
 nnoremap <leader>fd <cmd>lua require('telescope.setup').find_files()<cr>
 nnoremap <leader>fc <cmd>lua require('telescope.setup').curr_buff()<cr>
