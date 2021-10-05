@@ -3,7 +3,7 @@ setopt AUTO_CD
 setopt NO_CASE_GLOB
 
 # starting directory
-cd ~
+# cd ~
 
 # tab completion
 autoload -Uz compinit
