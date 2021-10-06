@@ -15,7 +15,7 @@ local new_maker = function(filepath, bufnr, opts)
 end
 
 local actions = require('telescope.actions')
-require('telescope').setup{
+require('telescope').setup({
   defaults = {
     buffer_previewer_maker = new_maker,
 
@@ -24,8 +24,19 @@ require('telescope').setup{
         ["<esc>"] = actions.close,
       },
     }, 
-  }
-}
+
+    layout_strategy = "flex",
+    layout_config = { 
+      preview_cutoff = 20,
+      width = 0.8,
+      height = 0.65,
+      flex = {
+        flip_columns = 130,
+      },
+    },
+  },
+})
+
 require('telescope').load_extension('fzf')
 
 local mappings = {}

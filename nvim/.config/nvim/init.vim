@@ -1,11 +1,15 @@
 lua require ('init')
 
 " i will move all of it to lua someday... i stg someday
-" display settings
+
+set hidden
+set encoding=utf-8
+
+syntax on
 filetype plugin indent on
 set number
 set visualbell
-" highlight Normal ctermfg=black ctermbg=lightgrey
+
 if (empty($TMUX))
   if (has("nvim"))
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -14,8 +18,7 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-colorscheme github_light
-let g:airline_theme='minimalist'
+colorscheme zenburn
 let g:airline#extensions#tabline#enabled = 1
 
 " general editor setting
@@ -25,6 +28,8 @@ set softtabstop=4
 set expandtab
 set noshiftround
 set backspace=indent,eol,start
+set ignorecase
+set smartcase
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab

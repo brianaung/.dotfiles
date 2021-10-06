@@ -14,8 +14,8 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'yggdroot/indentline'
   use 'vim-airline/vim-airline'
-
   use 'vim-airline/vim-airline-themes'
+
   use 'morhetz/gruvbox'
   use 'arcticicestudio/nord-vim'
   use 'projekt0n/github-nvim-theme'
