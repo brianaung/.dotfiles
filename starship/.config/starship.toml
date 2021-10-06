@@ -2,6 +2,7 @@
 # nord-bluegreen: #8fbcbb
 # nord-red: #BF616A
 # nord-yellow: #EBCB8B
+# zenburn-brightyellow: #F0DFAF
 
 add_newline = false
 
@@ -14,12 +15,12 @@ success_symbol = '[\$]()'
 error_symbol = '[\$]()'
 
 [username]
-# style_user = "#000000"
+style_user = "#F0DFAF"
 show_always = true
 format = '[$user@]()'
 
 [hostname]
-# style = "#000000"
+style = "#F0DFAF"
 ssh_only = false
 format = '[$hostname]()'
 
@@ -28,9 +29,9 @@ truncation_length = 1
 format = '[$path]()'
 
 [git_branch]
-style = "#8fbcbb"
+style = "#F0DFAF"
 symbol = ""
-format = " [$symbol$branch](bold cyan)"
+format = " [$symbol$branch]($style)"
 
 [git_status]
 style = "#BF616A"

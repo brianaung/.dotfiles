@@ -47,6 +47,6 @@ function precmd () {
 }
 
 # x server for wsl2
-export DISPLAY="`sed -n 's/nameserver //p' /etc/resolv.conf`:0"
+# export DISPLAY="`sed -n 's/nameserver //p' /etc/resolv.conf`:0"
 
 PATH="$HOME/.local/bin/:$PATH"
