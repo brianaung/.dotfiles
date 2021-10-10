@@ -6,29 +6,29 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function()
-  -- Packer can manage itself
+  -- Packer can manage itself --
   use 'wbthomason/packer.nvim'
-
-  -- More
-  use 'tpope/vim-fugitive'
-  use 'tpope/vim-commentary'
-  use 'yggdroot/indentline'
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
-
-  use 'morhetz/gruvbox'
-  use 'arcticicestudio/nord-vim'
-  use 'projekt0n/github-nvim-theme'
-
-  use 'lervag/vimtex'
-
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-
+  ------------------------------
   -- telescope
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-commentary'
+  use 'yggdroot/indentline'
+  use 'windwp/nvim-autopairs'
+  use 'lervag/vimtex'
+  use {
+    'iamcco/markdown-preview.nvim',
+    ft = 'markdown',
+    run = 'cd app && yarn install'
+  }
+
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  use 'morhetz/gruvbox'
+  use 'arcticicestudio/nord-vim'
 end)
