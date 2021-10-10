@@ -1,19 +1,3 @@
-local previewers = require('telescope.previewers')
-
-local new_maker = function(filepath, bufnr, opts)
-  opts = opts or {}
-
-  filepath = vim.fn.expand(filepath)
-  vim.loop.fs_stat(filepath, function(_, stat)
-    if not stat then return end
-    if stat.size > 100000 then
-      return
-    else
-      previewers.buffer_previewer_maker(filepath, bufnr, opts)
-    end
-  end)
-end
-
 local actions = require('telescope.actions')
 require('telescope').setup({
   defaults = {
@@ -27,11 +11,12 @@ require('telescope').setup({
 
     layout_strategy = "flex",
     layout_config = { 
-      preview_cutoff = 20,
+      preview_cutoff = 10,
       width = 0.8,
       height = 0.65,
       flex = {
         flip_columns = 130,
+        flip_lines = 30,
       },
     },
   },
