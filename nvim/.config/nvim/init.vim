@@ -1,27 +1,15 @@
 lua require ('init')
 
-" i will move all of it to lua someday... i stg someday
-
 set hidden
 set encoding=utf-8
+set updatetime=300
 
-syntax on
-filetype plugin indent on
-set number
-set visualbell
-
-if (empty($TMUX))
-  if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
+" colorscheme
+set termguicolors
 colorscheme zenburn
 let g:airline#extensions#tabline#enabled = 1
+let g:zenburn_alternate_Visual = 1
 
-" general editor setting
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -30,10 +18,13 @@ set noshiftround
 set backspace=indent,eol,start
 set ignorecase
 set smartcase
+set nu rnu
+set mouse=a
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype lua setlocal ts=2 sw=2 expandtab
+autocmd Filetype markdown setlocal ts=2 sw=2 expandtab
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -45,13 +36,10 @@ nnoremap <c-j> <c-w><c-j>
 nnoremap <c-k> <c-w><c-k>
 nnoremap <c-h> <c-w><c-h>
 nnoremap <c-l> <c-w><c-l>
-
-" make Y behaves like every other Cap (why isn't it default smh)
 nnoremap Y yg$
-
-" unsets the last search pattern registered by hitting return
 nnoremap <CR> :nohl<CR><CR>
 
+" telescope mappings
 nnoremap <leader>fd <cmd>lua require('telescope.setup').find_files()<cr>
 nnoremap <leader>fc <cmd>lua require('telescope.setup').curr_buff()<cr>
 nnoremap <leader>ft <cmd>lua require('telescope.setup').git_files()<cr>
@@ -73,9 +61,10 @@ function! s:check_back_space() abort
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" map <CR> to autoimport
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
-      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" confirm completion when selected with enter
+if exists('*complete_info')
+  inoremap <silent><expr> <c-space> complete_info(['selected'])['selected'] != -1 ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 " use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
