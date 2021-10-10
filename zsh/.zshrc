@@ -3,7 +3,7 @@ setopt AUTO_CD
 setopt NO_CASE_GLOB
 
 # starting directory
-# cd ~
+cd ~
 
 # tab completion
 autoload -Uz compinit
@@ -18,7 +18,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 # aliases
 alias la='ls -a'
 alias ll='ls -al'
-alias vi='nvim'
 # basic git (should rly put it in gitconfig)
 alias gs='git status'
 alias ga='git add'
@@ -30,7 +29,8 @@ alias python='python3'
 alias gccit='gcc -Wall -g -o'
 # flying to dirs
 alias whome='cd /mnt/c/Users/brian'
-alias eal='nvim /mnt/c/Users/brian/AppData/Roaming/alacritty/alacritty.yml'
+alias proj='cd /mnt/c/Users/brian/Projects'
+alias sch='cd /mnt/c/Users/brian/School'
 
 # starship 
 eval "$(starship init zsh)"
