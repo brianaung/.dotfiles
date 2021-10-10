@@ -5,34 +5,33 @@
 # zenburn-brightyellow: #F0DFAF
 
 add_newline = false
-
-# haven't figured out how to split line while also displaying literal chars '[' and ']' so bit messy
+command_timeout = 1000
+# haven't figured out how to split line while also displaying 
+# literal chars '[' and ']' so bit messy
 format = '''
-[\[]()$username$hostname $directory[\]]()$git_branch$git_status$character'''
+[\[](#F0DFAF)$username$hostname $directory[\]](#F0DFAF)$git_branch$git_status$character'''
 
 [character]
-success_symbol = '[\$]()'
-error_symbol = '[\$]()'
+success_symbol = '[\$](#F0DFAF)'
+error_symbol = '[\$](#F0DFAF)'
 
 [username]
-style_user = "#F0DFAF"
+# style_user = "#F0DFAF"
 show_always = true
-format = '[$user@]()'
+format = '[$user@](#F0DFAF)'
 
 [hostname]
-style = "#F0DFAF"
+# style = "#F0DFAF"
 ssh_only = false
-format = '[$hostname]()'
+format = '[$hostname](#F0DFAF)'
 
 [directory]
 truncation_length = 1 
 format = '[$path]()'
 
 [git_branch]
-style = "#F0DFAF"
 symbol = ""
-format = " [$symbol$branch]($style)"
+format = " [$symbol$branch](#DFAF8F)"
 
 [git_status]
-style = "#BF616A"
 format = '([\[$all_status$ahead_behind\]](bold red))'
