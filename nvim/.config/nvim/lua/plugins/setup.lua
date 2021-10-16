@@ -9,8 +9,9 @@ return require('packer').startup(function()
   -- Packer can manage itself --
   use 'wbthomason/packer.nvim'
   ------------------------------
-  -- telescope
   use 'nvim-lua/plenary.nvim'
+
+  -- telescope
   use 'nvim-telescope/telescope.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
@@ -32,7 +33,10 @@ return require('packer').startup(function()
     run = 'cd app && yarn install'
   }
 
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
+  -- use 'folke/lsp-colors.nvim'
+  use 'tjdevries/colorbuddy.nvim'
+  use 'tjdevries/gruvbuddy.nvim'
+  use 'tjdevries/express_line.nvim'
+  use 'crispgm/nvim-tabline'
 
 end)

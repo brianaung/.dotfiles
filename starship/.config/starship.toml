@@ -9,21 +9,21 @@ command_timeout = 1000
 # haven't figured out how to split line while also displaying 
 # literal chars '[' and ']' so bit messy
 format = '''
-[\[](#F0DFAF)$username$hostname $directory[\]](#F0DFAF)$git_branch$git_status$character'''
+[\[](#8abeb7)$username$hostname $directory[\]](#8abeb7)$git_branch$git_status$character'''
 
 [character]
-success_symbol = '[\$](#F0DFAF)'
-error_symbol = '[\$](#F0DFAF)'
+success_symbol = '[\$](#8abeb7)'
+error_symbol = '[\$](#8abeb7)'
 
 [username]
 # style_user = "#F0DFAF"
 show_always = true
-format = '[$user@](#F0DFAF)'
+format = '[$user@](#8abeb7)'
 
 [hostname]
 # style = "#F0DFAF"
 ssh_only = false
-format = '[$hostname](#F0DFAF)'
+format = '[$hostname](#8abeb7)'
 
 [directory]
 truncation_length = 1 
@@ -31,7 +31,7 @@ format = '[$path]()'
 
 [git_branch]
 symbol = ""
-format = " [$symbol$branch](#DFAF8F)"
+format = " [$symbol$branch](#b294bb)"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]](bold red))'
+format = '([\[$all_status$ahead_behind\]](#cc6666))'

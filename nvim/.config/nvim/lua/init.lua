@@ -4,4 +4,6 @@ require "plugins.lsp"
 require "plugins.treesitter"
 require "plugins.autopairs"
 
-require ('nvim_comment').setup()
+require('nvim_comment').setup()
+require('el').setup()
+require('tabline').setup({})

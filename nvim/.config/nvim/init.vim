@@ -1,12 +1,12 @@
 set hidden
 set encoding=utf-8
-set updatetime=300
+set updatetime=250
 
-" colorscheme
+" let g:rose_pine_disable_italics = v:true
+" let g:rose_pine_disable_background = v:true
+" colorscheme rose-pine
 set termguicolors
-colorscheme zenburn
-let g:airline#extensions#tabline#enabled = 1
-let g:zenburn_alternate_Visual = 1
+lua require('colorbuddy').colorscheme('gruvbuddy')
 
 lua require ('init')
 
@@ -21,8 +21,6 @@ set smartcase
 set nu rnu
 set mouse=a
 set cursorline
-set scrolloff=3
-set nowrap
 
 " file specific tab width
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
@@ -30,7 +28,6 @@ autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype lua setlocal ts=2 sw=2 expandtab
 autocmd Filetype markdown setlocal ts=2 sw=2 expandtab
-
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
