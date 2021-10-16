@@ -69,30 +69,30 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["coc.nvim"] = {
+  ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/coc.nvim"
-  },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
-  },
-  gruvbox = {
-    loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/gruvbox"
-  },
-  indentline = {
-    loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/indentline"
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
   },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
     path = "/home/brian/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
   },
-  ["nord-vim"] = {
+  ["nvim-autopairs"] = {
     loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/nord-vim"
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-cmp"
+  },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-comment"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -121,18 +121,6 @@ _G.packer_plugins = {
   ["vim-airline-themes"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/vim-commentary"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/vim-fugitive"
-  },
-  vimtex = {
-    loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/vimtex"
   }
 }
 
