@@ -1,5 +1,3 @@
-lua require ('init')
-
 set hidden
 set encoding=utf-8
 set updatetime=300
@@ -9,6 +7,8 @@ set termguicolors
 colorscheme zenburn
 let g:airline#extensions#tabline#enabled = 1
 let g:zenburn_alternate_Visual = 1
+
+lua require ('init')
 
 set tabstop=4
 set shiftwidth=4
@@ -20,11 +20,17 @@ set ignorecase
 set smartcase
 set nu rnu
 set mouse=a
+set cursorline
+set scrolloff=3
+set nowrap
+
+" file specific tab width
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype lua setlocal ts=2 sw=2 expandtab
 autocmd Filetype markdown setlocal ts=2 sw=2 expandtab
+
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -40,41 +46,11 @@ nnoremap Y yg$
 nnoremap <CR> :nohl<CR><CR>
 
 " telescope mappings
-nnoremap <leader>fd <cmd>lua require('telescope.setup').find_files()<cr>
-nnoremap <leader>fc <cmd>lua require('telescope.setup').curr_buff()<cr>
-nnoremap <leader>ft <cmd>lua require('telescope.setup').git_files()<cr>
-nnoremap <leader>fe <cmd>lua require('telescope.setup').file_browser()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.setup').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.setup').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.setup').help_tags()<cr>
-nnoremap <leader>en <cmd>lua require('telescope.setup').find_nvim()<cr>
-
-" use <tab> to trigger completion
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" confirm completion when selected with enter
-if exists('*complete_info')
-  inoremap <silent><expr> <c-space> complete_info(['selected'])['selected'] != -1 ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
-
-" use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
+nnoremap <leader>fd <cmd>lua require('plugins.telescope').find_files()<cr>
+nnoremap <leader>fc <cmd>lua require('plugins.telescope').curr_buff()<cr>
+nnoremap <leader>ft <cmd>lua require('plugins.telescope').git_files()<cr>
+nnoremap <leader>fe <cmd>lua require('plugins.telescope').file_browser()<cr>
+nnoremap <leader>fg <cmd>lua require('plugins.telescope').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('plugins.telescope').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('plugins.telescope').help_tags()<cr>
+nnoremap <leader>en <cmd>lua require('plugins.telescope').find_nvim()<cr>
