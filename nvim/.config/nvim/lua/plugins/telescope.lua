@@ -1,8 +1,11 @@
+local present, telescope = pcall(require, "telescope")
+if not present then
+  return
+end
+
 local actions = require('telescope.actions')
 require('telescope').setup({
   defaults = {
-    buffer_previewer_maker = new_maker,
-
     mappings = {
       i = {
         ["<esc>"] = actions.close,
