@@ -21,6 +21,8 @@ set smartcase
 set nu rnu
 set mouse=a
 set cursorline
+set scrolloff=2
+set noshowmode
 
 " file specific tab width
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
@@ -50,4 +52,4 @@ nnoremap <leader>fe <cmd>lua require('plugins.telescope').file_browser()<cr>
 nnoremap <leader>fg <cmd>lua require('plugins.telescope').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('plugins.telescope').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('plugins.telescope').help_tags()<cr>
-nnoremap <leader>en <cmd>lua require('plugins.telescope').find_nvim()<cr>
+nnoremap <leader>fn <cmd>lua require('plugins.telescope').find_nvim()<cr>
