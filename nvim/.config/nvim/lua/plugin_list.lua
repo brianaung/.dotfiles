@@ -20,16 +20,15 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig' 
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
+  use 'mfussenegger/nvim-jdtls'
 
   use 'terrortylor/nvim-comment'
   use 'windwp/nvim-autopairs'
-  use {
-    'iamcco/markdown-preview.nvim',
-    ft = 'markdown',
-    run = 'cd app && yarn install'
-  }
+  use 'ellisonleao/glow.nvim'
+  use 'norcalli/nvim-colorizer.lua'
 
   -- use 'folke/lsp-colors.nvim'
   use 'tjdevries/colorbuddy.nvim'

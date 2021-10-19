@@ -73,6 +73,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/LuaSnip"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
@@ -89,14 +93,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/express_line.nvim"
   },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/glow.nvim"
+  },
   ["gruvbuddy.nvim"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -141,13 +144,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Filetype lazy-loads
-time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
-time([[Defining lazy-load filetype autocommands]], false)
-vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)
