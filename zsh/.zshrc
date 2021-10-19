@@ -46,7 +46,5 @@ function precmd () {
     echo -ne "$window_title"
 }
 
-# x server for wsl2
-# export DISPLAY="`sed -n 's/nameserver //p' /etc/resolv.conf`:0"
-
 PATH="$HOME/.local/bin/:$PATH"
+export PATH="$PATH:/home/brian/.dotnet/tools"
