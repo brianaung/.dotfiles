@@ -10,6 +10,8 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- core plugins
+  use 'neovim/nvim-lspconfig' 
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'nvim-lua/plenary.nvim'
 
@@ -17,8 +19,7 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
-  -- lsp and completion
-  use 'neovim/nvim-lspconfig' 
+  -- completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -26,16 +27,13 @@ return require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim'
 
-  use 'folke/lsp-colors.nvim'
-  use 'terrortylor/nvim-comment'
-  use 'windwp/nvim-autopairs'
-  use 'xiyaowong/nvim-transparent'
-  use 'ellisonleao/glow.nvim'
-
   -- colorschemes 
-  use 'tjdevries/colorbuddy.nvim'
-  use 'tjdevries/gruvbuddy.nvim'
   use 'rktjmp/lush.nvim'
   use 'ellisonleao/gruvbox.nvim'
+
+  -- some useful tools
+  use 'terrortylor/nvim-comment'
+  use 'xiyaowong/nvim-transparent'
+  use 'ellisonleao/glow.nvim'
 
 end)

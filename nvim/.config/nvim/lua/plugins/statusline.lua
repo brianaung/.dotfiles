@@ -1,5 +1,0 @@
--- show tabs
--- require'tabline'.setup {
---  show_index = true,
---  show_modify = true,
--- }
