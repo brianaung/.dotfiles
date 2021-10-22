@@ -47,14 +47,17 @@ nnoremap Y yg$
 nnoremap <CR> :nohl<CR><CR>
 
 " telescope mappings
-nnoremap <leader>fd <cmd>lua require('plugins.telescope').find_files()<cr>
-nnoremap <leader>fc <cmd>lua require('plugins.telescope').curr_buff()<cr>
-nnoremap <leader>ft <cmd>lua require('plugins.telescope').git_files()<cr>
-nnoremap <leader>fe <cmd>lua require('plugins.telescope').file_browser()<cr>
-nnoremap <leader>fg <cmd>lua require('plugins.telescope').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('plugins.telescope').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('plugins.telescope').help_tags()<cr>
-nnoremap <leader>fn <cmd>lua require('plugins.telescope').find_nvim()<cr>
+nnoremap <leader>fd <cmd>lua require'telescope.builtin'.find_files{}<cr>
+nnoremap <leader>fn <cmd>lua require'telescope.builtin'.find_files{ cwd="~/.config/nvim" }<cr>
+nnoremap <leader>fc <cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find{}<cr>
+nnoremap <leader>ft <cmd>lua require'telescope.builtin'.git_files{}<cr>
+nnoremap <leader>fe <cmd>lua require'telescope.builtin'.file_browser{}<cr>
+nnoremap <leader>lg <cmd>lua require'telescope.builtin'.live_grep{}<cr>
+nnoremap <leader>b <cmd>lua require'telescope.builtin'.buffers{}<cr>
+nnoremap <leader>ht <cmd>lua require'telescope.builtin'.help_tags{}<cr>
+" git
+nnoremap <leader>gs <cmd>lua require'telescope.builtin'.git_status{}<cr>
+nnoremap <leader>gc <cmd>lua require'telescope.builtin'.git_commits{}<cr>
 
 " statusline
 function! LspStatus() abort
@@ -79,7 +82,6 @@ let g:currentmode={
        \ 'c'  : 'Command ',
        \}
 
-hi User1 guifg=#282C34 guibg=#f8fe7a
 set statusline=%1*\ %{toupper(g:currentmode[mode()])}%*\ %f\ %m%=%{LspStatus()}\ %y[%02l:%02v,%p%%]\ 
 "                               |                  |   |         |         |  |  |  |
 "                               |                  |   |         |         |  |  |  +- percentage
