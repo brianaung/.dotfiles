@@ -21,7 +21,7 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
-    { name = 'buffer' },
+    { name = 'buffer' , keyword_length = 5 },
   },
  
   snippet = {
@@ -41,6 +41,7 @@ cmp.setup {
     },
   },
 
+  -- new commits might break this so watch out
   experimental = {
     ghost_text = true,
   },
