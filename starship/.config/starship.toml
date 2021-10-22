@@ -3,27 +3,26 @@
 # nord-red: #BF616A
 # nord-yellow: #EBCB8B
 # zenburn-brightyellow: #F0DFAF
+# gruvbuddy blue: #8abeb7
 
 add_newline = false
 command_timeout = 1000
 # haven't figured out how to split line while also displaying 
 # literal chars '[' and ']' so bit messy
 format = '''
-[\[](#8abeb7)$username$hostname $directory[\]](#8abeb7)$git_branch$git_status$character'''
+[\[](#83a598)$username$hostname $directory[\]](#83a598)$git_branch$git_status$character'''
 
 [character]
-success_symbol = '[\$](#8abeb7)'
-error_symbol = '[\$](#8abeb7)'
+success_symbol = '[\$](#83a598)'
+error_symbol = '[\$](#83a598)'
 
 [username]
-# style_user = "#F0DFAF"
 show_always = true
-format = '[$user@](#8abeb7)'
+format = '[$user@](#83a598)'
 
 [hostname]
-# style = "#F0DFAF"
 ssh_only = false
-format = '[$hostname](#8abeb7)'
+format = '[$hostname](#83a598)'
 
 [directory]
 truncation_length = 1 
@@ -31,7 +30,7 @@ format = '[$path]()'
 
 [git_branch]
 symbol = ""
-format = " [$symbol$branch](#b294bb)"
+format = " [$symbol$branch](#d3869b)"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]](#cc6666))'
+format = '([\[$all_status$ahead_behind\]](#E5534F))'
