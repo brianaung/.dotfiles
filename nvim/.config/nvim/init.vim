@@ -9,27 +9,17 @@ set background=dark
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
-set noshiftround
-set backspace=indent,eol,start
-
-set ignorecase
-set smartcase
-set nu rnu
 set mouse=a
+set nu rnu
+set cursorline
 set scrolloff=2
 set noshowmode
-set cursorline
-
-" file specific tab width
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
-autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
-autocmd Filetype css setlocal ts=2 sw=2 expandtab
-autocmd Filetype lua setlocal ts=2 sw=2 expandtab
-autocmd Filetype markdown setlocal ts=2 sw=2 expandtab
+set ignorecase
+set smartcase
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -55,7 +45,6 @@ nnoremap <leader>fe <cmd>lua require'telescope.builtin'.file_browser{}<cr>
 nnoremap <leader>lg <cmd>lua require'telescope.builtin'.live_grep{}<cr>
 nnoremap <leader>b <cmd>lua require'telescope.builtin'.buffers{}<cr>
 nnoremap <leader>ht <cmd>lua require'telescope.builtin'.help_tags{}<cr>
-" git
 nnoremap <leader>gs <cmd>lua require'telescope.builtin'.git_status{}<cr>
 nnoremap <leader>gc <cmd>lua require'telescope.builtin'.git_commits{}<cr>
 
