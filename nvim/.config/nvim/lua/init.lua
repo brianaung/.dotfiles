@@ -5,14 +5,13 @@ require "plugin_list"
 -- load configs
 require "plugins.telescope"
 require "plugins.lsp"
+require "plugins.completion"
 require "plugins.treesitter"
 require "plugins.autopairs"
-require "plugins.statusline"
+-- require "plugins.statusline"
+
+-- setups
 require 'nvim_comment'.setup {}
-require 'colorizer'.setup {
-  'css',
-  'javascript',
-  html = {
-    'foreground',
-  }
+require 'transparent'.setup {
+  enable = true,
 }
