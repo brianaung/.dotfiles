@@ -89,17 +89,29 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
   },
-  ["express_line.nvim"] = {
-    loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/express_line.nvim"
-  },
   ["glow.nvim"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/glow.nvim"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
+  },
   ["gruvbuddy.nvim"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
+  },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/lush.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -117,9 +129,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
-  ["nvim-tabline"] = {
+  ["nvim-transparent"] = {
     loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-tabline"
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-transparent"
   },
   ["nvim-treesitter"] = {
     loaded = true,
