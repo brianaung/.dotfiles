@@ -6,20 +6,22 @@ end
 local actions = require('telescope.actions')
 require('telescope').setup({
   defaults = {
+    borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
     mappings = {
       i = {
         ["<esc>"] = actions.close,
       },
     }, 
-
     layout_strategy = "flex",
-    layout_config = { 
-      preview_cutoff = 10,
-      width = 0.8,
-      height = 0.65,
-      flex = {
-        flip_columns = 130,
-        flip_lines = 30,
+    layout_config = {
+      horizontal = {
+        width = 0.8,
+        height = 0.8,
+        preview_width = 0.6,
+      },
+      vertical = {
+        height = 0.8,
+        preview_height = 0.5,
       },
     },
   },
