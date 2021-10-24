@@ -9,17 +9,41 @@ set background=dark
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set mouse=a
+set showmode
+set showcmd
+set cmdheight=1
+set noequalalways
+set splitbelow
+set splitright
+set mouse=n
 set nu rnu
 set cursorline
-set scrolloff=2
-set noshowmode
+set scrolloff=5
 set ignorecase
 set smartcase
+set hlsearch
+
+set autoindent
+set cindent
+set wrap
+
+" tabs
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" smarter line breaking when wrapping
+set breakindent
+set showbreak=\ \ \ 
+set linebreak
+
+" show hidden chars by calling :set list
+set listchars=tab:→\ ,eol:↲,extends:›,precedes:‹,nbsp:␣,trail:~
+
+" i will properly comment these options later, for now read :h fo-table
+set formatoptions-=ato2
+set formatoptions+=cqrnj
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -55,29 +79,9 @@ function! LspStatus() abort
         let sl.='E:' .luaeval("vim.lsp.diagnostic.get_count(0, [[Error]])") . ', '
         let sl.='W:' .luaeval("vim.lsp.diagnostic.get_count(0, [[Warning]])")
     else
-        let sl.='Lsp off'
+        let sl.='lsp off'
     endif
     return sl
 endfunction
 
-let g:currentmode={
-       \ 'n'  : 'NORMAL ',
-       \ 'v'  : 'VISUAL ',
-       \ 'V'  : 'V·Line ',
-       \ "\<C-V>" : 'V·Block ',
-       \ 'i'  : 'INSERT ',
-       \ 'R'  : 'R ',
-       \ 'Rv' : 'V·Replace ',
-       \ 'c'  : 'Command ',
-       \}
-
-set statusline=%1*\ %{toupper(g:currentmode[mode()])}%*\ %f\ %m%=%{LspStatus()}\ %y[%02l:%02v,%p%%]\ 
-"                               |                  |   |         |         |  |  |  |
-"                               |                  |   |         |         |  |  |  +- percentage
-"                               |                  |   |         |         |  |  +- column number  
-"                               |                  |   |         |         |  +- line number    
-"                               |                  |   |         |         +- file type     
-"                               |                  |   |         +- lsp diagnostic message               
-"                               |                  |   +- modified flag                       
-"                               |                  +- file path                           
-"                               +- current mode
+set statusline=%f%R%m%=%l,%c%V\ \ \ \ %{LspStatus()}%y
