@@ -8,6 +8,8 @@ set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
+" make bg transparent
+autocmd ColorScheme * hi Normal guibg=none
 
 set showmode
 set showcmd
