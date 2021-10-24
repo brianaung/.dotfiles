@@ -35,12 +35,14 @@ require('packer').startup(function()
   use 'onsails/lspkind-nvim'
 
   -- colorscheme
-  use 'rktjmp/lush.nvim'
+  use 'rktjmp/lush.nvim' -- colorscheme maker/editor
   use 'ellisonleao/gruvbox.nvim'
 
   -- some useful tools
-  use 'terrortylor/nvim-comment'
-  use 'xiyaowong/nvim-transparent'
-  use 'ellisonleao/glow.nvim'
+  use 'ellisonleao/glow.nvim' -- preview markdown with Glow inside editor
+  use {
+    'terrortylor/nvim-comment',
+    config = function() require('nvim_comment').setup() end
+  }
 
 end)
