@@ -10,6 +10,7 @@ require "plugins.completion"
 
 -- setups
 require 'nvim_comment'.setup {}
+
 require 'transparent'.setup {
   enable = true,
 }
