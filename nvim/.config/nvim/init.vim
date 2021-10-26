@@ -19,7 +19,7 @@ set splitbelow
 set splitright
 set mouse=n
 set nu rnu
-set cursorline
+" set cursorline
 set scrolloff=5
 set ignorecase
 set smartcase
@@ -28,6 +28,23 @@ set hlsearch
 set autoindent
 set cindent
 set wrap
+
+" statusline
+set laststatus=2
+
+function! LspStatus() abort
+    let sl = ''
+    if luaeval('not vim.tbl_isempty(vim.lsp.buf_get_clients(0))')
+        let sl.='E:' .luaeval("vim.lsp.diagnostic.get_count(0, [[Error]])") . ', '
+        let sl.='W:' .luaeval("vim.lsp.diagnostic.get_count(0, [[Warning]])")
+    else
+        let sl.='lsp off'
+    endif
+    return sl
+endfunction
+
+" set statusline=%f%R%m%=%-14.(%l,%c%V%)\ %{LspStatus()}%y
+set statusline=%f\ [%{LspStatus()}]%h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " tabs
 set tabstop=4
@@ -69,21 +86,7 @@ nnoremap <leader>fc <cmd>lua require'telescope.builtin'.current_buffer_fuzzy_fin
 nnoremap <leader>ft <cmd>lua require'telescope.builtin'.git_files{}<cr>
 nnoremap <leader>fe <cmd>lua require'telescope.builtin'.file_browser{}<cr>
 nnoremap <leader>lg <cmd>lua require'telescope.builtin'.live_grep{}<cr>
-nnoremap <leader>b <cmd>lua require'telescope.builtin'.buffers{}<cr>
+nnoremap <leader>fb <cmd>lua require'telescope.builtin'.buffers{}<cr>
 nnoremap <leader>ht <cmd>lua require'telescope.builtin'.help_tags{}<cr>
 nnoremap <leader>gs <cmd>lua require'telescope.builtin'.git_status{}<cr>
 nnoremap <leader>gc <cmd>lua require'telescope.builtin'.git_commits{}<cr>
-
-" statusline
-function! LspStatus() abort
-    let sl = ''
-    if luaeval('not vim.tbl_isempty(vim.lsp.buf_get_clients(0))')
-        let sl.='E:' .luaeval("vim.lsp.diagnostic.get_count(0, [[Error]])") . ', '
-        let sl.='W:' .luaeval("vim.lsp.diagnostic.get_count(0, [[Warning]])")
-    else
-        let sl.='lsp off'
-    endif
-    return sl
-endfunction
-
-set statusline=%f%R%m%=%l,%c%V\ \ \ \ %{LspStatus()}%y
