@@ -18,15 +18,12 @@ local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- let packer manage itself
 
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  use 'nvim-lua/plenary.nvim'
-
-  -- telescope
-  use 'nvim-telescope/telescope.nvim'
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
-  -- lsp and completion
+  -- core features???
   use 'neovim/nvim-lspconfig' 
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
+  
+  -- completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -34,11 +31,19 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim'
 
+  -- fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
   -- colorscheme
   use 'rktjmp/lush.nvim' -- colorscheme maker/editor
-  use 'ellisonleao/gruvbox.nvim'
-
-  -- some useful tools
+  use 'sainnhe/gruvbox-material'
+  use '~/.config/nvim/colors/mine' -- my very own colorscheme (wip)
+  
+  -- other useful tools
   use 'ellisonleao/glow.nvim' -- preview markdown with Glow inside editor
   use {
     'terrortylor/nvim-comment',
