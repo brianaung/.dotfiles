@@ -18,8 +18,9 @@ local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- let packer manage itself
 
-  -- core features???
+  -- lsp
   use 'neovim/nvim-lspconfig' 
+
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
   
@@ -40,8 +41,8 @@ require('packer').startup(function()
 
   -- colorscheme
   use 'rktjmp/lush.nvim' -- colorscheme maker/editor
-  use 'sainnhe/gruvbox-material'
   use '~/.config/nvim/colors/mine' -- my very own colorscheme (wip)
+  use 'sainnhe/gruvbox-material'  -- best ever
   
   -- other useful tools
   use 'ellisonleao/glow.nvim' -- preview markdown with Glow inside editor

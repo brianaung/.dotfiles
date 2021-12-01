@@ -30,7 +30,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 })
 
 -- Enable following language servers
-local servers = { 'clangd', 'pyright', 'cssls', 'html', 'tsserver' }
+local servers = { 'clangd', 'pyright', 'cssls', 'html', 'tsserver', 'solargraph', 'jdtls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
