@@ -41,7 +41,6 @@ require('packer').startup(function()
 
   -- colorscheme
   use 'rktjmp/lush.nvim' -- colorscheme maker/editor
-  use '~/.config/nvim/colors/mine' -- my very own colorscheme (wip)
   use 'sainnhe/gruvbox-material'  -- best ever
   
   -- other useful tools
