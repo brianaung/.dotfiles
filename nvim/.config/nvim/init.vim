@@ -5,9 +5,15 @@ set encoding=utf-8
 set updatetime=250
 
 set termguicolors
-colorscheme mine
+let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_disable_italic_comment = 1
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_visual = 'reverse'
+let g:gruvbox_material_menu_selection_background = 'yellow'
+let g:gruvbox_material_diagnostic_virtual_text = 'colored'
+colorscheme gruvbox-material
 
-" statusline
+" custom statusline
 set laststatus=2
 
 function! LspStatus() abort
@@ -21,7 +27,7 @@ function! LspStatus() abort
     return sl
 endfunction
 
-set statusline=%f%h%m%r\ [%{LspStatus()}]%=%-14.(%l,%c%V%)\ %P
+set statusline=%t%h%m%r\ [%{LspStatus()}]%=%-14.(%l,%c%V%)\ %P
 
 set showmode
 set showcmd
@@ -54,6 +60,7 @@ set showbreak=\ \ \
 set linebreak
 
 " i will properly comment what these options do later, for now read :h fo-table
+" somehow these are not working (need to fix)
 set formatoptions-=ato2
 set formatoptions+=cqrnj
 
@@ -81,8 +88,9 @@ nnoremap <leader>fc <cmd>lua require'telescope.builtin'.current_buffer_fuzzy_fin
 nnoremap <leader>ft <cmd>lua require'telescope.builtin'.git_files{}<cr>
 nnoremap <leader>fe <cmd>lua require'telescope.builtin'.file_browser{}<cr>
 nnoremap <leader>lg <cmd>lua require'telescope.builtin'.live_grep{}<cr>
-nnoremap <leader>b <cmd>lua require'telescope.builtin'.buffers{}<cr>
+nnoremap <leader>fb <cmd>lua require'telescope.builtin'.buffers{}<cr>
 nnoremap <leader>ht <cmd>lua require'telescope.builtin'.help_tags{}<cr>
 nnoremap <leader>gs <cmd>lua require'telescope.builtin'.git_status{}<cr>
 nnoremap <leader>gc <cmd>lua require'telescope.builtin'.git_commits{}<cr>
 nnoremap <leader>en <cmd>lua require'telescope.builtin'.find_files{ cwd="~/.config/nvim" }<cr>
+nnoremap <leader>ec <cmd>lua require'telescope.builtin'.find_files{ cwd="~/.config/nvim/colors/mine" }<cr>
