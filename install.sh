@@ -4,12 +4,11 @@ curl -L https://nixos.org/nix/install | sh
 
 # install nix packages
 nix-env -iA \
-	nixpkgs.zsh \
-    nixpkgs.antibody \
+    nixpkgs.zsh \
     nixpkgs.starship \
-	nixpkgs.neovim \
-	nixpkgs.git \
-	nixpkgs.stow \
+    nixpkgs.neovim \
+    nixpkgs.git \
+    nixpkgs.stow \
     nixpkgs.yarn \
     nixpkgs.fzf \
     nixpkgs.ripgrep \
