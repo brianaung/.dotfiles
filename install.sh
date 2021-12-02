@@ -22,8 +22,9 @@ nix-env -iA \
 
 # create symlink for all the dotfiles using stow
 stow zsh
-stow nvim
 stow starship
+stow nvim
+stow git
 
 # add and use zsh as default shell
 command -v zsh | sudo tee -a /etc/shells
