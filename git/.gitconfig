@@ -1,0 +1,21 @@
+[user]
+	email = soekhantaung16@gmail.com
+	name = Brian Aung
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+[push]
+    default = current
