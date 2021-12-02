@@ -13,7 +13,12 @@ nix-env -iA \
     nixpkgs.fzf \
     nixpkgs.ripgrep \
     nixpkgs.bat \
-    nixpkgs.direnv
+    nixpkgs.direnv \
+    nixpkgs.gnumake \
+    nixpkgs.gcc \
+    nixpkgs.valgrind \
+    nixpkgs.python3Full \
+    nixpkgs.jdk
 
 # create symlink for all the dotfiles using stow
 stow zsh
@@ -24,5 +29,10 @@ stow starship
 command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
 
-# bundle zsh plugins
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+# install node using version manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | zsh
+nvm install node
+
+# install language servers for webdev
+npm i -g vscode-langservers-extracted
+npm i -g typescript typescript-language-server
