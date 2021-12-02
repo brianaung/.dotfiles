@@ -41,7 +41,7 @@ require('packer').startup(function()
 
   -- colorscheme
   use 'rktjmp/lush.nvim' -- colorscheme maker/editor
-  use 'sainnhe/gruvbox-material'  -- best ever
+  use 'sainnhe/gruvbox-material'
   
   -- other useful tools
   use 'ellisonleao/glow.nvim' -- preview markdown with Glow inside editor
