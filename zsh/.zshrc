@@ -29,15 +29,6 @@ alias pg='cd /mnt/c/Users/brian/Playground'
 alias sch='cd /mnt/c/Users/brian/School'
 
 # nvm installation
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# PATH="$HOME/.local/bin/:$PATH"
-# export PATH="$PATH:/home/brian/.dotnet/tools"
-# export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-
-# rbenv
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
-
-# export JDTLS_HOME="$HOME/.jdtls/"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
