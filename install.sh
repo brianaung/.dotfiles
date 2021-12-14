@@ -1,3 +1,12 @@
+# initial update and installing packages not available (or i couldn't find/make it work) on nix
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    sudo apt-get update && sudo apt-get upgrade -y
+    sudo apt-get install build-essential manpages-dev
+    sudo apt install valgrind
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # macos
+fi
+
 # install and source nix
 curl -L https://nixos.org/nix/install | sh
 . ~/.nix-profile/etc/profile.d/nix.sh
@@ -32,6 +41,7 @@ sudo chsh -s $(which zsh) $USER
 
 # install node using version manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | zsh
+source ${HOME}/.zshrc
 nvm install node
 
 # install language servers for webdev
