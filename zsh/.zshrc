@@ -24,9 +24,9 @@ alias ll='ls -al'
 alias python='python3'
 alias gccit='gcc -Wall -g -o'
 alias whome='cd /mnt/c/Users/brian'
-alias proj='cd /mnt/c/Users/brian/Projects'
-alias pg='cd /mnt/c/Users/brian/Playground'
-alias sch='cd /mnt/c/Users/brian/School'
+alias proj='cd /mnt/c/MyDocs/Projects'
+alias pg='cd /mnt/c/MyDocs/Playground'
+alias sch='cd /mnt/c/MyDocs/School'
 
 # nvm installation
 export NVM_DIR="$HOME/.nvm"
