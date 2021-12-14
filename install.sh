@@ -2,7 +2,6 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo apt-get update && sudo apt-get upgrade -y
     sudo apt-get install build-essential manpages-dev
-    sudo apt install valgrind
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # macos
 fi
