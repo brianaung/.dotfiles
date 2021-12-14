@@ -1,9 +1,12 @@
+#!/bin/bash
+
 # initial update and installing packages not available (or i couldn't find/make it work) on nix
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo apt-get update && sudo apt-get upgrade -y
-    sudo apt-get install build-essential manpages-dev
+    sudo apt-get install build-essential manpages-dev -y
+    sudo apt-get install xz-utils -y
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    # macos
+    echo "macos"
 fi
 
 # install and source nix
