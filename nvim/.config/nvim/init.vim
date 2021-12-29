@@ -5,13 +5,7 @@ set encoding=utf-8
 set updatetime=250
 
 set termguicolors
-let g:gruvbox_material_better_performance = 1
-let g:gruvbox_material_disable_italic_comment = 1
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_visual = 'reverse'
-let g:gruvbox_material_menu_selection_background = 'yellow'
-let g:gruvbox_material_diagnostic_virtual_text = 'colored'
-colorscheme gruvbox-material
+colorscheme gruvy
 
 " custom statusline
 set laststatus=2
