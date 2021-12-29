@@ -7,8 +7,13 @@ set updatetime=250
 set termguicolors
 colorscheme gruvy
 
-" custom statusline
+" custom statusline and tabline
 set laststatus=2
+set showtabline=2
+
+hi MiniTablineCurrent guifg=#282C34 guibg=#81A2BE
+hi MiniTablineModifiedCurrent guifg=#C5C8C6 guibg=#81A2BE
+hi MiniTablineModifiedHidden guifg=#C5C8C6
 
 function! LspStatus() abort
     let sl = ''
