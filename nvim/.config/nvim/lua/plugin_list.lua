@@ -18,11 +18,10 @@ local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- let packer manage itself
 
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
   -- lsp
   use 'neovim/nvim-lspconfig' 
-
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
   
   -- completion
   use 'hrsh7th/nvim-cmp'
@@ -41,13 +40,16 @@ require('packer').startup(function()
 
   -- colorscheme
   use 'rktjmp/lush.nvim' -- colorscheme maker/editor
-  use 'sainnhe/gruvbox-material'
+  use '~/.config/nvim/colors/gruvy'
   
   -- other useful tools
   use 'ellisonleao/glow.nvim' -- preview markdown with Glow inside editor
   use {
-    'terrortylor/nvim-comment',
-    config = function() require('nvim_comment').setup() end
+    'numToStr/Comment.nvim',
+    config = function() require('Comment').setup() end
   }
+
+  -- tests
+  use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
 
 end)
