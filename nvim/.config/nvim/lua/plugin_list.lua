@@ -52,4 +52,14 @@ require('packer').startup(function()
   -- tests
   use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
 
+  use {
+    'echasnovski/mini.nvim',
+    config = function() 
+      require('mini.tabline').setup({ 
+        show_icons = false, 
+        set_vim_settings = true 
+      }) 
+    end
+  }
+
 end)
