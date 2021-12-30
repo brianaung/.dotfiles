@@ -7,6 +7,8 @@ set updatetime=250
 set termguicolors
 colorscheme gruvy
 
+let g:dashboard_default_executive = 'telescope'
+
 " custom statusline and tabline
 set laststatus=2
 set showtabline=2
@@ -37,7 +39,7 @@ set splitright
 set mouse=n
 set nu rnu
 set cursorline
-set scrolloff=10
+set scrolloff=5
 set ignorecase
 set smartcase
 set hlsearch
@@ -85,11 +87,10 @@ nnoremap <CR> :nohl<CR><CR>
 nnoremap <leader>fd <cmd>lua require'telescope.builtin'.find_files{}<cr>
 nnoremap <leader>fc <cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find{}<cr>
 nnoremap <leader>ft <cmd>lua require'telescope.builtin'.git_files{}<cr>
-nnoremap <leader>fe <cmd>lua require'telescope.builtin'.file_browser{}<cr>
+nnoremap <leader>fe <cmd>lua require'telescope'.extensions.file_browser.file_browser{}<cr>
 nnoremap <leader>lg <cmd>lua require'telescope.builtin'.live_grep{}<cr>
 nnoremap <leader>fb <cmd>lua require'telescope.builtin'.buffers{}<cr>
 nnoremap <leader>ht <cmd>lua require'telescope.builtin'.help_tags{}<cr>
 nnoremap <leader>gs <cmd>lua require'telescope.builtin'.git_status{}<cr>
 nnoremap <leader>gc <cmd>lua require'telescope.builtin'.git_commits{}<cr>
 nnoremap <leader>en <cmd>lua require'telescope.builtin'.find_files{ cwd="~/.config/nvim" }<cr>
-nnoremap <leader>ec <cmd>lua require'telescope.builtin'.find_files{ cwd="~/.config/nvim/colors/mine" }<cr>
