@@ -8,7 +8,7 @@ local theme = lush(function()
     packerWorking                          { SpecialKey }, -- packerWorking  xxx links to SpecialKey
     EndOfBuffer                            { fg="#969896", sp="none", bg="none", }, -- EndOfBuffer    xxx guifg=#969896 guibg=none guisp=none
     TermCursor                             { gui="reverse", }, -- TermCursor     xxx cterm=reverse gui=reverse
-    NonText                                { fg="#4e545c", gui="italic", sp="none", bg="none", }, -- NonText        xxx ctermfg=12 gui=italic guifg=#4e545c guibg=none guisp=none
+    NonText                                { fg="#4e545c", sp="none", bg="none", }, -- NonText        xxx ctermfg=12 gui=italic guifg=#4e545c guibg=none guisp=none
     TelescopePreviewHyphen                 { NonText }, -- TelescopePreviewHyphen xxx links to NonText
     TelescopeResultsDiffUntracked          { NonText }, -- TelescopeResultsDiffUntracked xxx links to NonText
     TelescopePromptCounter                 { NonText }, -- TelescopePromptCounter xxx links to NonText
@@ -335,7 +335,7 @@ local theme = lush(function()
     TSConstMacro                           { Define }, -- TSConstMacro   xxx links to Define
     StorageClass                           { fg="#f8fe7a", sp="none", bg="none", }, -- StorageClass   xxx guifg=#f8fe7a guibg=none guisp=none
     cssProp                                { StorageClass }, -- cssProp        xxx links to StorageClass
-    Type                                   { fg="#b294bb", gui="italic", sp="none", bg="none", }, -- Type           xxx ctermfg=121 gui=italic guifg=#b294bb guibg=none guisp=none
+    Type                                   { fg="#b294bb", sp="none", bg="none", }, -- Type           xxx ctermfg=121 gui=italic guifg=#b294bb guibg=none guisp=none
     NvimNumberPrefix                       { Type }, -- NvimNumberPrefix xxx links to Type
     NvimOptionSigil                        { Type }, -- NvimOptionSigil xxx links to Type
     packerOutput                           { Type }, -- packerOutput   xxx links to Type
