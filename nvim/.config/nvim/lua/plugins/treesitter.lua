@@ -1,4 +1,6 @@
 require'nvim-treesitter.configs'.setup ({
+  ensure_installed = { "c", "cpp", "python", "html", "css", "javascript", "typescript", "lua", "java", "c_sharp", "markdown", "make" },
+
   highlight = {
     enable = true,  -- false will disable the whole extension
   },
