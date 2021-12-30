@@ -9,7 +9,7 @@ telescope.setup({
       i = {
         ["<esc>"] = actions.close,
       },
-    }, 
+    },
 
     layout_strategy = "flex",
     layout_config = {
@@ -27,3 +27,4 @@ telescope.setup({
 })
 
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('file_browser')
