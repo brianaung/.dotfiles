@@ -16,14 +16,12 @@ vim.api.nvim_exec(
 
 local use = require('packer').use
 require('packer').startup(function()
-  use 'wbthomason/packer.nvim' -- let packer manage itself
+  use 'wbthomason/packer.nvim' -- automanage itself
 
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  -- lsp
+  -- lsp & completion
   use 'neovim/nvim-lspconfig' 
-  
-  -- completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -32,11 +30,10 @@ require('packer').startup(function()
   use 'onsails/lspkind-nvim'
 
   -- fuzzy finder
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
-  }
+  use 'nvim-telescope/telescope.nvim' -- core
+  use 'nvim-lua/plenary.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use 'nvim-telescope/telescope-file-browser.nvim'
 
   -- colorscheme
   use 'rktjmp/lush.nvim' -- colorscheme maker/editor
@@ -44,6 +41,7 @@ require('packer').startup(function()
   
   -- other useful tools
   use 'ellisonleao/glow.nvim' -- preview markdown with Glow inside editor
+
   use {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup() end
@@ -52,14 +50,8 @@ require('packer').startup(function()
   -- tests
   use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
 
-  use {
-    'echasnovski/mini.nvim',
-    config = function() 
-      require('mini.tabline').setup({ 
-        show_icons = false, 
-        set_vim_settings = true 
-      }) 
-    end
-  }
+  use 'echasnovski/mini.nvim'
+
+  use 'goolord/alpha-nvim' -- dashboard ui
 
 end)
