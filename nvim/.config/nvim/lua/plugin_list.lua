@@ -20,8 +20,11 @@ require('packer').startup(function()
 
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  -- lsp & completion
+  -- lsp
   use 'neovim/nvim-lspconfig' 
+  use 'mfussenegger/nvim-jdtls' -- java
+
+  -- completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -29,19 +32,21 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim'
 
-  -- fuzzy finder
+  -- telescope
   use 'nvim-telescope/telescope.nvim' -- core
   use 'nvim-lua/plenary.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- colorscheme
   use 'rktjmp/lush.nvim' -- colorscheme maker/editor
   use '~/.config/nvim/colors/gruvy'
   
   -- other useful tools
+  use 'echasnovski/mini.nvim'
+  use 'goolord/alpha-nvim' -- dashboard ui
   use 'ellisonleao/glow.nvim' -- preview markdown with Glow inside editor
-
   use {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup() end
@@ -49,9 +54,5 @@ require('packer').startup(function()
 
   -- tests
   use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
-
-  use 'echasnovski/mini.nvim'
-
-  use 'goolord/alpha-nvim' -- dashboard ui
 
 end)
