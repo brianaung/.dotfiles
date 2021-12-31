@@ -48,5 +48,22 @@ local config = {
     bundles = {}
   },
 }
-
 require('jdtls').start_or_attach(config)
+
+-- keybinds from lspconfig
+local opts = { noremap = true, silent = true }
+local map = vim.api.nvim_set_keymap
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+map('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+map('n', '<leader>sh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+map('n', '<leader>se', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+
+-- extra capabilities provided by nvim-jdtls
+map("n", "<leader>oi", "<cmd>lua require'jdtls'.organize_imports()<CR>", opts)
+map("n", "crv", "<Esc><cmd>lua require'jdtls'.extract_variable(true)<CR>", opts)
+map("n", "crc", "<Esc><cmd>lua require'jdtls'.extract_constant(true)<CR>", opts)
+map("n", "crm", "<Esc><cmd>lua require'jdtls'.extract_method(true)<CR>", opts)
