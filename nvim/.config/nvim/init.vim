@@ -1,3 +1,6 @@
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
 lua require ('init')
 
 set hidden
@@ -68,9 +71,6 @@ set formatoptions+=cqrnj
 " show hidden chars by calling :set list
 set listchars=tab:→\ ,eol:↲,extends:›,precedes:‹,nbsp:␣,trail:~
 
-nnoremap <SPACE> <Nop>
-let mapleader = " "
-
 inoremap kj <Esc>
 nnoremap j gj
 nnoremap k gk
@@ -82,15 +82,3 @@ nnoremap <c-h> <c-w><c-h>
 nnoremap <c-l> <c-w><c-l>
 nnoremap Y yg$
 nnoremap <CR> :nohl<CR><CR>
-
-" telescope mappings
-nnoremap <leader>fd <cmd>lua require'telescope.builtin'.find_files{}<cr>
-nnoremap <leader>fc <cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find{}<cr>
-nnoremap <leader>ft <cmd>lua require'telescope.builtin'.git_files{}<cr>
-nnoremap <leader>fe <cmd>lua require'telescope'.extensions.file_browser.file_browser{}<cr>
-nnoremap <leader>lg <cmd>lua require'telescope.builtin'.live_grep{}<cr>
-nnoremap <leader>fb <cmd>lua require'telescope.builtin'.buffers{}<cr>
-nnoremap <leader>ht <cmd>lua require'telescope.builtin'.help_tags{}<cr>
-nnoremap <leader>gs <cmd>lua require'telescope.builtin'.git_status{}<cr>
-nnoremap <leader>gc <cmd>lua require'telescope.builtin'.git_commits{}<cr>
-nnoremap <leader>en <cmd>lua require'telescope.builtin'.find_files{ cwd="~/.config/nvim" }<cr>
