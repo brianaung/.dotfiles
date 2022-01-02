@@ -1,0 +1,9 @@
+[colors]
+background = '#282c34'
+foreground = '#c5c8c6'
+
+# selection_bg = '#ffffff'
+# selection_fg = '#ffffff'
+
+ansi = ['#282c34', '#cc6666', '#99cc99', '#f8fe7a', '#81a2be', '#8e6fbd', '#8abeb7', '#f2e5bc']
+brights = ['#767676', '#e74856', '#8ec07c', '#f9f1a5', '#698b69', '#b294bb', '#63d9d6', '#c5c8c6']
