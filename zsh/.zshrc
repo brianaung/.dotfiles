@@ -1,6 +1,12 @@
 # use nix installer
 if [ -e /home/brian/.nix-profile/etc/profile.d/nix.sh ]; then . /home/brian/.nix-profile/etc/profile.d/nix.sh; fi 
 
+# if tmux is executable and not inside a tmux session, then try to attach.
+# if attachment fails, start a new session
+[ -x "$(command -v tmux)" ] \
+  && [ -z "${TMUX}" ] \
+  && { tmux attach || tmux; } >/dev/null 2>&1
+
 # use starship prompt
 eval "$(starship init zsh)"
 
