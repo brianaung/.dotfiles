@@ -1,5 +1,5 @@
 # .dotfiles
 
-My configuration files and tools. Feel free to copy whatever you like.
+My configuration files and tools.
 
 Always a WIP :)
