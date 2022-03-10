@@ -16,13 +16,16 @@ vim.api.nvim_exec(
 
 local use = require('packer').use
 require('packer').startup(function()
-  use 'wbthomason/packer.nvim' -- automanage itself
+  use 'wbthomason/packer.nvim'
 
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
   -- lsp
   use 'neovim/nvim-lspconfig' 
-  use 'mfussenegger/nvim-jdtls' -- java
+  use 'mfussenegger/nvim-jdtls'
+
+  -- debugger
+  use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
 
   -- completion
   use 'hrsh7th/nvim-cmp'
@@ -39,20 +42,19 @@ require('packer').startup(function()
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
 
-  -- colorscheme
-  use 'rktjmp/lush.nvim' -- colorscheme maker/editor
-  use '~/.config/nvim/colors/gruvy'
-  
-  -- other useful tools
+  -- display
   use 'echasnovski/mini.nvim'
-  use 'goolord/alpha-nvim' -- dashboard ui
-  use 'ellisonleao/glow.nvim' -- preview markdown with Glow inside editor
+  use 'rktjmp/lush.nvim' -- colorscheme editor
+  use '~/.config/nvim/colors/gruvy'
+  use 'rebelot/kanagawa.nvim'
+  
+  -- useful tools
+  use 'ellisonleao/glow.nvim'
   use {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup() end
   }
+  use 'kdheepak/lazygit.nvim'
 
-  -- tests
-  use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
 
 end)
