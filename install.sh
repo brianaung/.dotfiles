@@ -2,44 +2,42 @@
 
 # initial update and installing packages not available (or i couldn't find/make it work) on nix
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update && sudo apt-get upgrade -y
+    sudo apt-get install neovim
     sudo apt-get install build-essential manpages-dev -y
     sudo apt-get install xz-utils -y
+    sudo apt-get install clangd-12
+    sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo "macos"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    brew install llvm
 fi
 
 # install and source nix
-curl -L https://nixos.org/nix/install | sh
-. ~/.nix-profile/etc/profile.d/nix.sh
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
 # install nix packages
 nix-env -iA \
     nixpkgs.zsh \
     nixpkgs.starship \
-    nixpkgs.neovim \
-    nixpkgs.git \
     nixpkgs.stow \
-    nixpkgs.yarn \
     nixpkgs.fzf \
     nixpkgs.ripgrep \
-    nixpkgs.bat \
-    nixpkgs.direnv \
-    nixpkgs.gnumake \
-    nixpkgs.gcc \
     nixpkgs.valgrind \
-    nixpkgs.python3Full \
-    nixpkgs.jdk
+    nixpkgs.spotify-tui \
 
 # create symlink for all the dotfiles using stow
 stow zsh
 stow starship
 stow nvim
 stow git
+stow tmux
 
-# add and use zsh as default shell
-command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # install node using version manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | zsh
@@ -47,5 +45,6 @@ source ${HOME}/.zshrc
 nvm install node
 
 # install language servers for webdev
+source ${HOME}/.zshrc
 npm i -g vscode-langservers-extracted
 npm i -g typescript typescript-language-server
