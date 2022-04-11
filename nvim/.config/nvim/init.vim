@@ -8,17 +8,16 @@ set encoding=utf-8
 set updatetime=250
 
 set termguicolors
-colorscheme gruvy
+colorscheme kanagawa
 
 let g:dashboard_default_executive = 'telescope'
 
 " custom statusline and tabline
-set laststatus=2
+set laststatus=3
 set showtabline=2
 
-hi MiniTablineCurrent guifg=#282C34 guibg=#81A2BE
-hi MiniTablineModifiedCurrent guifg=#C5C8C6 guibg=#81A2BE
-hi MiniTablineModifiedHidden guifg=#C5C8C6
+hi MiniTablineCurrent guifg=#090618 guibg=#C8C093
+hi MiniTablineModifiedCurrent guifg=#090618 guibg=#C8C093
 
 function! LspStatus() abort
     let sl = ''
