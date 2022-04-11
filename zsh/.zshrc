@@ -24,11 +24,20 @@ eval "$(TERM=xterm dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
+# autosuggestions like fish
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+bindkey '^y' autosuggest-accept
+
 # aliases
-alias la='ls -a'
-alias ll='ls -al'
+# use exa for prettier ls outputs
+alias ls='exa --classify'
+alias la='exa --all --classify'
+alias ll='exa --long --all --classify'
+
 alias python='python3'
-alias gccit='gcc -Wall -g -o'
+
+# flying around dirs
 alias whome='cd /mnt/c/Users/brian'
 alias proj='cd /mnt/c/MyDocs/Projects'
 alias pg='cd /mnt/c/MyDocs/Playground'
@@ -36,5 +45,5 @@ alias sch='cd /mnt/c/MyDocs/School'
 
 # nvm installation
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
