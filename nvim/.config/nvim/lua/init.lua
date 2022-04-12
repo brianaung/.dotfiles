@@ -1,11 +1,13 @@
 -- disable unused builtin vim plugins
 require "disable_builtin"
 
-require "plugin_list"
+-- first load plugins
+require "plugins"
+
 -- load configs
-require "plugins.treesitter"
-require "plugins.telescope"
-require "plugins.lsp"
-require "plugins.completion"
-require "plugins.tabline"
-require "plugins.surround"
+require "plugin.treesitter"
+require "plugin.telescope"
+require "plugin.lsp"
+require "plugin.completion"
+require "plugin.tabline"
+require "plugin.surround"

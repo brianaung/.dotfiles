@@ -1,6 +1,8 @@
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 
+let snippets = "luasnip"
+
 lua require ('init')
 
 set hidden
@@ -68,6 +70,7 @@ set formatoptions-=ato2
 set formatoptions+=cqrnj
 
 " show hidden chars by calling :set list
+set list
 set listchars=tab:→\ ,eol:↲,extends:›,precedes:‹,nbsp:␣,trail:~
 
 inoremap kj <Esc>

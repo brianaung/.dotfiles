@@ -52,7 +52,7 @@ require('packer').startup(function()
   use 'ellisonleao/glow.nvim'
   use {
     'numToStr/Comment.nvim',
-    config = function() require('Comment').setup() end
+--    config = function() require('Comment').setup() end
   }
   use 'kdheepak/lazygit.nvim'
 
