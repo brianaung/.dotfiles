@@ -3,9 +3,9 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 local lspkind = require "lspkind"
 lspkind.init()
 
-local luasnip = require 'luasnip'
+local luasnip = require "luasnip"
 
-local cmp = require 'cmp'
+local cmp = require "cmp"
 cmp.setup {
   mapping = {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
@@ -23,7 +23,7 @@ cmp.setup {
     { name = 'luasnip' },
     { name = 'buffer' , keyword_length = 5 },
   },
- 
+
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)

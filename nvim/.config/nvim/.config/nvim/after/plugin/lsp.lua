@@ -37,4 +37,4 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
     capabilities = capabilities,
   }
-end
+ end

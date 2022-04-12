@@ -24,5 +24,5 @@ local disable_builtin = {
 }
 
 for _, plugin in pairs(disable_builtin) do
-    vim.g["loaded_" .. plugin] = 1
+  vim.g["loaded_" .. plugin] = 1
 end

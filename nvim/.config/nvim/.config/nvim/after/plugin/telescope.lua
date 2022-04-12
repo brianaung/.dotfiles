@@ -3,8 +3,9 @@ local actions = require('telescope.actions')
 
 telescope.setup({
   defaults = {
-    borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
 
+    -- borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+    
     mappings = {
       i = {
         ["<esc>"] = actions.close,
@@ -23,13 +24,16 @@ telescope.setup({
         preview_height = 0.5,
       },
     },
+
   },
 })
+
+-- load extensions
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('file_browser')
 require('telescope').load_extension('ui-select')
 
--- keymaps
+-- set keymaps
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 

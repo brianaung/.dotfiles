@@ -16,18 +16,13 @@ vim.api.nvim_exec(
 
 local use = require('packer').use
 require('packer').startup(function()
+  -- self manage installer
   use 'wbthomason/packer.nvim'
 
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  -- lsp
-  use 'neovim/nvim-lspconfig' 
-  use 'mfussenegger/nvim-jdtls'
-
-  -- debugger
-  use 'mfussenegger/nvim-dap' -- haven't enable, will test when im free
-
-  -- completion
+  -- lsp and completion
+  use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -41,20 +36,5 @@ require('packer').startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
-
-  -- display
-  use 'echasnovski/mini.nvim'
-  use 'rktjmp/lush.nvim' -- colorscheme editor
-  use '~/.config/nvim/colors/gruvy'
-  use 'rebelot/kanagawa.nvim'
-  
-  -- useful tools
-  use 'ellisonleao/glow.nvim'
-  use {
-    'numToStr/Comment.nvim',
---    config = function() require('Comment').setup() end
-  }
-  use 'kdheepak/lazygit.nvim'
-
 
 end)
