@@ -23,6 +23,7 @@ require('packer').startup(function()
 
   -- lsp and completion
   use 'neovim/nvim-lspconfig'
+  use 'mfussenegger/nvim-jdtls'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -36,5 +37,9 @@ require('packer').startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
+
+  use 'Mofiqul/vscode.nvim'
+  use 'numToStr/Comment.nvim'
+  use 'ellisonleao/glow.nvim'
 
 end)
