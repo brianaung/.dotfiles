@@ -94,15 +94,35 @@ _G.packer_plugins = {
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["glow.nvim"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/glow.nvim",
     url = "https://github.com/ellisonleao/glow.nvim"
   },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
+  },
+  ["mini.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -154,10 +174,10 @@ _G.packer_plugins = {
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vscode.nvim"] = {
+  ["vim-mustache-handlebars"] = {
     loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/vscode.nvim",
-    url = "https://github.com/Mofiqul/vscode.nvim"
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/vim-mustache-handlebars",
+    url = "https://github.com/mustache/vim-mustache-handlebars"
   }
 }
 

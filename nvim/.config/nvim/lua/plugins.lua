@@ -10,7 +10,7 @@ vim.api.nvim_exec(
     autocmd!
     autocmd BufWritePost plugin_list.lua PackerCompile
   augroup end
-]], 
+]],
   false
 )
 
@@ -21,13 +21,17 @@ require('packer').startup(function()
 
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  -- lsp and completion
+  -- lsp
   use 'neovim/nvim-lspconfig'
   use 'mfussenegger/nvim-jdtls'
+  use 'mustache/vim-mustache-handlebars'
+
+  -- completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim'
 
@@ -38,8 +42,13 @@ require('packer').startup(function()
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
 
-  use 'Mofiqul/vscode.nvim'
+  -- colorsheme
+  use 'rebelot/kanagawa.nvim'
+
+  -- utilities
   use 'numToStr/Comment.nvim'
   use 'ellisonleao/glow.nvim'
+  use 'github/copilot.vim'
+  use 'echasnovski/mini.nvim'
 
 end)
