@@ -4,8 +4,8 @@ local actions = require('telescope.actions')
 telescope.setup({
   defaults = {
 
-    -- borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-    
+    borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+
     mappings = {
       i = {
         ["<esc>"] = actions.close,
@@ -24,6 +24,9 @@ telescope.setup({
         preview_height = 0.5,
       },
     },
+
+    -- files to ignore when fuzzy finding
+    file_ignore_patterns = { "node_modules" },
 
   },
 })
