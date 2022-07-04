@@ -9,16 +9,18 @@ vim.g.maplocalleader = " "
 vim.cmd [[
 runtime! lua/core/options.lua
 runtime! lua/core/mappings.lua
+runtime! lua/plugin/emmet.vim
 ]]
 
 -- load colorscheme
-require('kanagawa').setup({
-    commentStyle = "NONE",
-})
-vim.cmd [[ 
+vim.g.gruvbox_material_better_performance = 1
+vim.g.gruvbox_material_background = 'hard'
+vim.g.gruvbox_material_disable_italic_comment = 1
+vim.g.gruvbox_material_visual = 'reverse'
+vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
+vim.g.gruvbox_material_statusline_style = 'mix'
+vim.cmd [[
 set termguicolors
 set bg=dark
-colo kanagawa
-set list
-set listchars=tab:→\ ,eol:↲,extends:›,precedes:‹,nbsp:␣,trail:~
+colo gruvbox-material
 ]]
