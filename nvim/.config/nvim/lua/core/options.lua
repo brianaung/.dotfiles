@@ -18,12 +18,15 @@ o.splitbelow = true
 o.relativenumber = true
 o.scrolloff = 5
 o.number = true
+o.cursorline = true
+o.showtabline = 2
 o.belloff = "all"
 o.incsearch = true
-o.showmatch = true
 o.ignorecase = true
 o.smartcase = true
 o.hlsearch = true
+o.swapfile = false
+o.laststatus = 3
 
 o.autoindent = true
 o.cindent = true
@@ -48,13 +51,8 @@ o.inccommand = "split"
 
 o.mouse = "n"
 
-o.formatoptions = o.formatoptions
-  - "a" -- Auto formatting is BAD.
-  - "t" -- Don't auto format my code. I got linters for that.
-  + "c" -- In general, I like it when comments respect textwidth
-  + "q" -- Allow formatting comments w/ gq
-  - "o" -- O and o, don't continue comments
-  + "r" -- But do continue when pressing enter.
-  + "n" -- Indent past the formatlistpat, not underneath it.
-  + "j" -- Auto-remove comments if possible.
-  - "2" -- I'm not in gradeschool anymore
+o.list = true
+vim.cmd [[ 
+set listchars=tab:→\ ,eol:↲,extends:›,precedes:‹,nbsp:␣,trail:~
+set winbar=%=%m\ %f
+]]
