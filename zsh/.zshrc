@@ -35,6 +35,8 @@ alias ls='exa --classify'
 alias la='exa --all --classify'
 alias ll='exa --long --all --classify'
 
+alias open='explorer.exe'
+
 alias python='python3'
 
 # flying around dirs
@@ -47,3 +49,7 @@ alias sch='cd /mnt/c/MyDocs/School'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+alias luamake=/home/brian/lua-language-server/3rd/luamake/luamake
+
+export PATH="$HOME/tools/lua-language-server/bin/Linux:$PATH"

@@ -1,8 +1,8 @@
 local o = vim.opt_local
-o.shiftwidth = 4
-o.tabstop = 4
-o.softtabstop = 4
-o.expandtab = true
+-- o.shiftwidth = 2
+-- o.tabstop = 2
+-- o.softtabstop = 2
+-- o.expandtab = true
 
 -- jdtls setup
 local home = os.getenv('HOME')
@@ -31,7 +31,7 @@ local config = {
     -- install and move jdtls folder to this dir -> $HOME/.libraries/...
     -- create workspace folder in -> $HOME/.workspace
     '-jar', home .. '/.libraries/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
-    '-configuration', home .. '/.libraries/jdtls/config_linux/',
+    '-configuration', home .. '/.libraries/jdtls/config_linux',
     '-data', workspace_dir,
   },
 
@@ -48,7 +48,7 @@ local config = {
     bundles = {}
   },
 }
-require('jdtls').start_or_attach(config)
+-- require('jdtls').start_or_attach(config)
 
 -- keybinds from lspconfig
 local opts = { noremap = true, silent = true }
@@ -57,9 +57,9 @@ map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 map('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 map('n', '<leader>sh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-map('n', '<leader>se', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+map('n', '<leader>se', '<cmd>lua vim.lsp.diagnostic.open_float()<CR>', opts)
+map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
 vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 
 -- extra capabilities provided by nvim-jdtls

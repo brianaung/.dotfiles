@@ -24,16 +24,16 @@ require('packer').startup(function()
   -- lsp
   use 'neovim/nvim-lspconfig'
   use 'mfussenegger/nvim-jdtls'
-  use 'mustache/vim-mustache-handlebars'
 
   -- completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
-  use 'L3MON4D3/LuaSnip'
-  use 'rafamadriz/friendly-snippets'
-  use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim'
+  -- snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
 
   -- telescope
   use 'nvim-telescope/telescope.nvim' -- core
@@ -43,12 +43,14 @@ require('packer').startup(function()
   use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- colorsheme
-  use 'rebelot/kanagawa.nvim'
+  use 'ellisonleao/gruvbox.nvim'
+  use 'sainnhe/gruvbox-material'
 
   -- utilities
   use 'numToStr/Comment.nvim'
   use 'ellisonleao/glow.nvim'
-  use 'github/copilot.vim'
   use 'echasnovski/mini.nvim'
+
+  use 'mattn/emmet-vim'
 
 end)

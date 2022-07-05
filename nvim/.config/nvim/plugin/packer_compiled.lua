@@ -94,10 +94,10 @@ _G.packer_plugins = {
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot.vim"] = {
+  ["emmet-vim"] = {
     loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -109,10 +109,15 @@ _G.packer_plugins = {
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/glow.nvim",
     url = "https://github.com/ellisonleao/glow.nvim"
   },
-  ["kanagawa.nvim"] = {
+  ["gruvbox-material"] = {
     loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
+  },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -173,11 +178,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-mustache-handlebars"] = {
-    loaded = true,
-    path = "/home/brian/.local/share/nvim/site/pack/packer/start/vim-mustache-handlebars",
-    url = "https://github.com/mustache/vim-mustache-handlebars"
   }
 }
 

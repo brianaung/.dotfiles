@@ -2,11 +2,17 @@
 
 # initial update and installing packages not available (or i couldn't find/make it work) on nix
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    #neovim nightly
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update && sudo apt-get upgrade -y
     sudo apt-get install neovim
+    # build essential and tools
     sudo apt-get install build-essential manpages-dev -y
     sudo apt-get install xz-utils -y
+    sudo apt-get install ninja-build
+    sudo apt-get install python3-venv
+    sudo apt-get install sqlite3
+    # install clangd lsp
     sudo apt-get install clangd-12
     sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
 elif [[ "$OSTYPE" == "darwin"* ]]; then
@@ -48,3 +54,4 @@ nvm install node
 source ${HOME}/.zshrc
 npm i -g vscode-langservers-extracted
 npm i -g typescript typescript-language-server
+npm i -g emmet-ls
