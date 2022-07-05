@@ -52,4 +52,4 @@ export NVM_DIR="$HOME/.nvm"
 
 alias luamake=/home/brian/lua-language-server/3rd/luamake/luamake
 
-export PATH="$HOME/tools/lua-language-server/bin/Linux:$PATH"
+export PATH="$HOME/.libraries/lua-language-server/bin/Linux:$PATH"
