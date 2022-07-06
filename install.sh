@@ -27,7 +27,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     nixpkgs.fzf \
     nixpkgs.ripgrep \
     nixpkgs.exa \
-    nixpkgs.tmux
+    nixpkgs.tmux \
+    nixpkgs.ninja
   
   # link config files
   stow zsh
@@ -53,6 +54,11 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   nvm exec npm i -g vscode-langservers-extracted
   nvm exec npm i -g typescript typescript-language-server
   nvm exec npm i -g emmet-ls
+
+  # prettier lua
+  curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+  . $HOME/.cargo/env
+  cargo install stylua
 
   exec sudo --login --user $USER
 fi

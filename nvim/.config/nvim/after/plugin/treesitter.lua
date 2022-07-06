@@ -1,8 +1,21 @@
-require'nvim-treesitter.configs'.setup ({
-  ensure_installed = { "c", "cpp", "python", "html", "css", "javascript", "typescript", "lua", "java", "c_sharp", "markdown", "make" },
+require("nvim-treesitter.configs").setup {
+  ensure_installed = {
+    "c",
+    "cpp",
+    "python",
+    "html",
+    "css",
+    "javascript",
+    "typescript",
+    "lua",
+    "java",
+    "c_sharp",
+    "markdown",
+    "make",
+  },
 
   highlight = {
-    enable = true,  -- false will disable the whole extension
+    enable = true, -- false will disable the whole extension
   },
 
   incremental_selection = {
@@ -18,4 +31,4 @@ require'nvim-treesitter.configs'.setup ({
   indent = {
     enable = false,
   },
-})
+}

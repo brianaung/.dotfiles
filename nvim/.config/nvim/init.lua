@@ -1,5 +1,5 @@
-require("plugins")
-require("disable_builtin")
+require "plugins"
+require "disable_builtin"
 
 -- my leader
 vim.g.mapleader = " "

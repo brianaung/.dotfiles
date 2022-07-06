@@ -1,21 +1,25 @@
 require("luasnip.loaders.from_vscode").lazy_load()
 
-local ls = require('luasnip')
-local types = require('luasnip.util.types')
+local ls = require "luasnip"
+local types = require "luasnip.util.types"
 
-ls.config.set_config({
+ls.config.set_config {
   history = true,
+
   updateevents = "TextChanged,TextChangedI",
+
   enable_autosnippets = true,
+
   ext_opts = {
     [types.choiceNode] = {
       active = {
-        virt_text = { { "choiceNode", "Comment" } },
+        virt_text = { { "●", "Error" } },
       },
     },
   },
-})
+}
 
+-- keymaps
 vim.keymap.set({ "i", "s" }, "<c-k>", function()
   if ls.expand_or_jumpable() then
     ls.expand_or_jump()
