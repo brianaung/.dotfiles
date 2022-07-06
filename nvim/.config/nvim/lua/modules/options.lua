@@ -54,5 +54,5 @@ o.mouse = "n"
 o.list = true
 vim.cmd [[ 
 set listchars=tab:→\ ,eol:↲,extends:›,precedes:‹,nbsp:␣,trail:~
-set winbar=%=%m\ %f
+" set winbar=%=%m\ %f
 ]]
