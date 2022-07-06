@@ -43,7 +43,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- sumneko config
-local sumneko_root_path = os.getenv("HOME") .. "/tools/lua-language-server"
+local sumneko_root_path = os.getenv("HOME") .. "/.libraries/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 require'lspconfig'.sumneko_lua.setup {
   cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
