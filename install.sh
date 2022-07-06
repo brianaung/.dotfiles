@@ -47,6 +47,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
   # install node
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | zsh
+  tput reset && . ~/.zshrc
   nvm install node
 
   nvm exec npm i -g vscode-langservers-extracted
