@@ -6,7 +6,7 @@
 # gruvbuddy blue: #8abeb7
 
 add_newline = false
-command_timeout = 1000
+command_timeout = 2000
 # haven't figured out how to split line while also displaying 
 # literal chars '[' and ']' so bit messy
 format = '''
