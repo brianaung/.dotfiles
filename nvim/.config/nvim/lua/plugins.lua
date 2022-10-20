@@ -22,7 +22,8 @@ require("packer").startup(function()
   -- self manage installer
   use "wbthomason/packer.nvim"
 
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  -- treesitter
+  use {"nvim-treesitter/nvim-treesitter"}
 
   -- lsp
   use "neovim/nvim-lspconfig"
@@ -48,11 +49,17 @@ require("packer").startup(function()
   -- colorsheme
   use "ellisonleao/gruvbox.nvim"
   use "sainnhe/gruvbox-material"
+  use "rebelot/kanagawa.nvim"
 
   -- utilities
   use "numToStr/Comment.nvim"
   use "ellisonleao/glow.nvim"
   use "echasnovski/mini.nvim"
+  use { "ms-jpq/chadtree" , run = "python3 -m chadtree deps", branch = "chad" }
 
   use "mattn/emmet-vim"
+
+  -- my plugins
+  -- use "/home/brian/projects/plugins/stackmap.nvim"
+
 end)
