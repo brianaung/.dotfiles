@@ -27,6 +27,7 @@ o.smartcase = true
 o.hlsearch = true
 o.swapfile = false
 o.laststatus = 3
+o.guicursor = "i:block"
 
 o.autoindent = true
 o.cindent = true

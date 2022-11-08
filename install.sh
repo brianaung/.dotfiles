@@ -33,7 +33,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # link config files
   stow zsh
   stow starship
-  #stow nvim
+  stow nvim
   stow git
   stow tmux
 

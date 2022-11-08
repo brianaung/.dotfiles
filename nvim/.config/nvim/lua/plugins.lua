@@ -55,9 +55,10 @@ require("packer").startup(function()
   use "numToStr/Comment.nvim"
   use "ellisonleao/glow.nvim"
   use "echasnovski/mini.nvim"
-  use { "ms-jpq/chadtree" , run = "python3 -m chadtree deps", branch = "chad" }
+  -- use { "ms-jpq/chadtree" , run = "python3 -m chadtree deps", branch = "chad" }
 
   use "mattn/emmet-vim"
+  use "olivercederborg/poimandres.nvim"
 
   -- my plugins
   -- use "/home/brian/projects/plugins/stackmap.nvim"
