@@ -89,9 +89,9 @@ local servers = {
   "clangd",
   "pyright",
   "tsserver",
-  "cssls",
   "solargraph",
   "jdtls",
+  "tailwindcss",
 }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
