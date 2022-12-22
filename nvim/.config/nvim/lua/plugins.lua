@@ -28,6 +28,7 @@ require("packer").startup(function()
   -- lsp
   use "neovim/nvim-lspconfig"
   use "mfussenegger/nvim-jdtls"
+  use "ray-x/lsp_signature.nvim"
 
   -- completion
   use "hrsh7th/nvim-cmp"
@@ -45,6 +46,9 @@ require("packer").startup(function()
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
   use "nvim-telescope/telescope-file-browser.nvim"
   use "nvim-telescope/telescope-ui-select.nvim"
+
+  -- formatter
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- colorsheme
   use "ellisonleao/gruvbox.nvim"
