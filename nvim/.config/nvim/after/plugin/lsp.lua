@@ -86,11 +86,11 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 -- Enable following language servers
 local servers = {
-  "clangd",
+  -- "clangd",
   "pyright",
   "tsserver",
-  "solargraph",
-  "jdtls",
+  -- "solargraph",
+  -- "jdtls",
   "tailwindcss",
   "prismals",
 }

@@ -1,3 +1,5 @@
+export LC_ALL=C
+
 # use nix installer
 if [ -e /home/brian/.nix-profile/etc/profile.d/nix.sh ]; then . /home/brian/.nix-profile/etc/profile.d/nix.sh; fi 
 
