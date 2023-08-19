@@ -10,41 +10,44 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # tput reset
   # sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
 
+  # make needed for telescope nvim
+  sudo apt install build-essential
+
   # use nix package manager
-  sh <(curl -L https://nixos.org/nix/install) --no-daemon
-  . /home/$USER/.nix-profile/etc/profile.d/nix.sh
+  sh <(curl -L https://nixos.org/nix/install) --daemon
 
   # nix packages
   nix-env -iA \
-    nixpkgs.neovim \
-    nixpkgs.zsh \
-    nixpkgs.starship \
     nixpkgs.stow \
+    nixpkgs.neovim \
+    # nixpkgs.zsh \
+    nixpkgs.fish \
+    nixpkgs.starship \
     nixpkgs.fzf \
     nixpkgs.ripgrep \
     nixpkgs.exa \
-    nixpkgs.tmux \
+    # nixpkgs.tmux \
 
   # link config files
-  stow zsh
-  stow starship
+  # stow zsh
+  # stow starship
   stow nvim
   stow git
-  stow tmux
-  stow alacritty
+  # stow tmux
+  # stow alacritty
 
   # zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+  # git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+  # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-  # change shell to zsh
-  if grep -q zsh /etc/shells; then
-    echo "zsh already exists"
+  # change shell to fish
+  if grep -q fish /etc/shells; then
+    echo "fish already exists"
   else
-    echo "adding zsh"
-    command -v zsh | sudo tee -a /etc/shells
+    echo "adding fish"
+    echo $(which fish) | sudo tee -a /etc/shells
   fi
-  chsh -s $(which zsh)
+  chsh -s $(which fish)
 
   # install node
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | zsh
@@ -55,7 +58,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
   npm i -g vscode-langservers-extracted
   npm i -g typescript typescript-language-server
-  npm i -g @prisma/language-server
+  # npm i -g @prisma/language-server
 
   # prettier lua
   # curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
