@@ -1,0 +1,1 @@
+bind \cy accept-autosuggestion
