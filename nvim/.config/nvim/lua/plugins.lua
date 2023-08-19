@@ -51,9 +51,9 @@ require("packer").startup(function()
   use "jose-elias-alvarez/null-ls.nvim"
 
   -- colorsheme
-  use "ellisonleao/gruvbox.nvim"
-  use "sainnhe/gruvbox-material"
-  use "rebelot/kanagawa.nvim"
+  -- use "ellisonleao/gruvbox.nvim"
+  -- use "sainnhe/gruvbox-material"
+  -- use "rebelot/kanagawa.nvim"
 
   -- utilities
   use "numToStr/Comment.nvim"
@@ -63,8 +63,5 @@ require("packer").startup(function()
 
   use "mattn/emmet-vim"
   use "olivercederborg/poimandres.nvim"
-
-  -- my plugins
-  -- use "/home/brian/projects/plugins/stackmap.nvim"
 
 end)

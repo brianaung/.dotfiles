@@ -87,12 +87,12 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 -- Enable following language servers
 local servers = {
   -- "clangd",
-  "pyright",
+  -- "pyright",
   "tsserver",
   -- "solargraph",
   -- "jdtls",
-  "tailwindcss",
-  "prismals",
+  -- "tailwindcss",
+  -- "prismals",
 }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
@@ -102,30 +102,30 @@ for _, lsp in ipairs(servers) do
 end
 
 -- sumneko config
-local sumneko_root_path = os.getenv "HOME" .. "/.libraries/lua-language-server"
-local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
-require("lspconfig").sumneko_lua.setup {
-  cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = "LuaJIT",
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { "vim" },
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+-- local sumneko_root_path = os.getenv "HOME" .. "/.libraries/lua-language-server"
+-- local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
+-- require("lspconfig").sumneko_lua.setup {
+--   cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
+--   settings = {
+--     Lua = {
+--       runtime = {
+--         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+--         version = "LuaJIT",
+--       },
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = { "vim" },
+--       },
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = vim.api.nvim_get_runtime_file("", true),
+--       },
+--       -- Do not send telemetry data containing a randomized but unique identifier
+--       telemetry = {
+--         enable = false,
+--       },
+--     },
+--   },
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }

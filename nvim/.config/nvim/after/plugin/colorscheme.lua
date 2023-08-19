@@ -7,5 +7,5 @@ vim.g.gruvbox_material_statusline_style = "mix" ]]
 
 vim.cmd [[
 set bg=dark
-colo kanagawa
+" colo kanagawa
 ]]

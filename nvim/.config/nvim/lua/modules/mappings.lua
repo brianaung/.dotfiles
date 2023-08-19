@@ -34,4 +34,4 @@ nnoremap("Y", "yg$")
 -- remove search highlight
 nnoremap("<cr>", "<cmd>nohl<cr><cr>")
 
-nnoremap("<leader>v", "<cmd>CHADopen<cr>")
+-- nnoremap("<leader>v", "<cmd>CHADopen<cr>")

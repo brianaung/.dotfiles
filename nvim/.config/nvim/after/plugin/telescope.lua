@@ -48,7 +48,7 @@ map(
 map(
   "n",
   "<leader>en",
-  "<cmd>lua require 'telescope.builtin'.find_files{ cwd='~/.config/nvim' }<cr>",
+  "<cmd>lua require 'telescope'.extensions.file_browser.file_browser{  cwd='~/.config/nvim/' }<cr>",
   opts
 )
 map(
