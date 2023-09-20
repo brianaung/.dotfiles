@@ -56,6 +56,8 @@ require('lazy').setup({
     },
   },
 
+  -- miscellaneous
   { 'numToStr/Comment.nvim', opts = {} },
+  { 'olivercederborg/poimandres.nvim', lazy = false, priority = 1000, }
 
 }, {})

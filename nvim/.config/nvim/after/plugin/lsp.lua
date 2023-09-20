@@ -46,7 +46,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 -- Enable following language servers
 local servers = {
   tsserver = {},
-  eslint = {},
+  ocamllsp = {},
   lua_ls = {},
 }
 
